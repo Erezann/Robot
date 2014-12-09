@@ -8,7 +8,7 @@
 #include "Position.h"
 #include "Etat/Etat.h"
 #include "Etat/AVide.h"
-#include "ElementARepresenter.h"
+#include "View/ElementARepresenter.h"
 
 using namespace std;
 

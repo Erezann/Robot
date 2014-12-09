@@ -1,6 +1,6 @@
 #include "Robot.h"
-#include "ElementARepresenter.h"
-#include "AfficheurTexte.h"
+#include "View/ElementARepresenter.h"
+#include "View/AfficheurTexte.h"
 
 int main(){
 

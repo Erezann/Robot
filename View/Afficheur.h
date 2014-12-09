@@ -1,7 +1,7 @@
 #ifndef _AFFICHEUR_
 #define _AFFICHEUR_
 
-#include "Robot.h"
+#include "../Robot.h"
 
 using namespace std;
 

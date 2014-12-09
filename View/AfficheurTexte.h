@@ -1,7 +1,7 @@
 #ifndef _AFFICHEUR_TEXTE_
 #define _AFFICHEUR_TEXTE_
 
-#include "Robot.h"
+#include "../Robot.h"
 
 class AfficheurTexte : public Afficheur
 {
