@@ -10,13 +10,26 @@
 #define _CommandeRobot_h
 
 #include "Commande.h"
-#include "Robot.h"
+#include "../Robot.h"
+#include "../View/ElementARepresenter.h"
+#include "../View/AfficheurTexte.h"
+#include "../View/Afficheur.h"
 
 class CommandeRobot : public Commande{
+
+ public:
+  CommandeRobot(){ 
+    ElementARepresenter* e = new ElementARepresenter();
+    Robot *r = new Robot(0,0,"S",e); 
+    Afficheur* a = new AfficheurTexte(r);
+    e->attacherAfficheur(a);
     
+    robot=r;
+  }
+  
 protected:
-    Robot robot;
+    Robot* robot;
     
-}
+};
 
 #endif

@@ -60,6 +60,11 @@ class Robot
   //Affiche les données élémentaires de l'état du robot
    void afficher();
 
+   //retourne la coordonnée x de position
+   int getX(){ return position.getx(); }
+
+   //retour la coordonnée y de position
+   int getY(){ return position.gety(); }
 };
 
 #endif
