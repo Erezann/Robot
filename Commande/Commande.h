@@ -12,14 +12,13 @@ class LireEntree;
 
 class Commande
 {
- private:
-  static stack<Commande> commandeUtilisee;
-  static map<string,Commande> commandes;
-
  public:
-  static Commande* nouvelleCommande(string s, LireEntree* e);
+  static stack<Commande*> commandeUtilisees;
+  static map<string,Commande*> commandes;
+
+  static Commande* nouvelleCommande(string s, LireEntree* e );
   
-  virtual Commande* constructeurVirtuel(LireEntree e) = 0;
+  virtual Commande* constructeurVirtuel(LireEntree* e) = 0;
   virtual void execute() = 0;
 
 
