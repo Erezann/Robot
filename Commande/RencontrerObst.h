@@ -14,18 +14,19 @@
 #include "CommandeRobot.h"
 
 class RencontrerObst : public CommandeRobot{
-private:
+protected:
     
-    Plot plot;
+    Plot* plot;
     
 public:
+    RencontrerObst(Plot* p):plot(p){}
     
-    Commande constructeurVirtuel(LireEntree e);
+    Commande constructeurVirtuel(LireEntree* e);
     
-    Commande execute();
+    void execute();
     
     void undo();
-}
+};
 
 
 #endif

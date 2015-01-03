@@ -15,12 +15,13 @@
 class Figer : public CommandeRobot{
     
 public:
+    Figer():CommandeRobot(){}
     
-    Commande constructeurVirtuel(LireEntree e);
+    Commande constructeurVirtuel(LireEntree* e);
     
-    Commande execute();
+    void execute();
     
     void undo();
-}
+};
 
 #endif

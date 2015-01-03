@@ -12,3 +12,8 @@ void Avancer::execute(){
   Commande::commandeUtilisees.push(this);
   robot->avancer(x,y);
 }
+
+void Avancer::undo(){
+    x = x_origin;
+    y = y_origin;
+}
