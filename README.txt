@@ -14,10 +14,9 @@ make clean
 Action sur les commandes :
 
 Pour tester et ajouter des commandes modifier Commande/Commande.cpp
+Ajouter les include nécessaires et compléter la fonction create_map().
 
-Enlever les commentaires pour include les nomCommande.h ainsi que pour ajout les nomCommande dans le map des commandes.
-
-Compléter COMMANDES_FILES en ajoutant les fichiers .o qui correspondent aux commandes manquantes.
+Compléter OBJ_FILES en rajoutant les fichier manquants
 
 Pour compiler:
 make commande
