@@ -1,10 +1,8 @@
 #include "Commande.h"
 //à compléter à chaque nouvelle commande
-/*
  
 #include "Avancer.h"
-
-*/
+#include "Undo.h"
 
 
 stack<Commande*> Commande::commandeUtilisees = stack<Commande*>();
@@ -13,10 +11,8 @@ stack<Commande*> Commande::commandeUtilisees = stack<Commande*>();
 map<string,Commande*> create_map(){
   map<string,Commande*> m;
 
-  /*
   m["Avancer"] = new Avancer();
-*/
-
+  m["Undo"] = new Undo();
   return m;
 }
 

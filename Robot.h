@@ -30,7 +30,7 @@ class Robot
   //Constructeur de robot avec interface d'affichag
   Robot(int x, int y,string dir,ElementARepresenter* e);
 
-  //déplace le robor aux coordonnées (x,y)
+  //déplace le robot aux coordonnées (x,y)
   void avancer(int x,int y);
 
   //   tourne le robot dans la direction d
@@ -61,10 +61,10 @@ class Robot
    void afficher();
 
    //retourne la coordonnée x de position
-   int getX(){ return position.getx(); }
+   int getX();
 
    //retour la coordonnée y de position
-   int getY(){ return position.gety(); }
+   int getY();
 };
 
 #endif

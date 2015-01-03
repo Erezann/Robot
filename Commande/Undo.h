@@ -3,13 +3,13 @@
 
 #include "Commande.h"
 
-class Undo 
+class Undo : public Commande
 {
   
  public:
-  Commande* constructeurVirtuel(LireEntree e);
+  Commande* constructeurVirtuel(LireEntree* e);
   void execute();
 
-}
+};
 
 #endif

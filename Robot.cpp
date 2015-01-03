@@ -62,3 +62,11 @@ void Robot::repartir(){
   elems->notifier();
 }
 
+int Robot::getX(){ 
+  return position.getx(); 
+}
+
+int Robot::getY(){
+  return position.gety(); 
+}
+

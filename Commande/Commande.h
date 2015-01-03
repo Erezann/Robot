@@ -20,6 +20,7 @@ class Commande
   
   virtual Commande* constructeurVirtuel(LireEntree* e) = 0;
   virtual void execute() = 0;
+  virtual void undo(){}
 
 
 };
