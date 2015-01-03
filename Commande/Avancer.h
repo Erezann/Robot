@@ -21,8 +21,8 @@ private:
     int x_origin, y_origin;
     
 public:
-    Avancer(){}
- Avancer(int x,int y,int orig_x,int orig_y): x(x),y(y),x_origin(orig_x),y_origin(orig_y){}
+    Avancer():CommandeRobot(){}
+    Avancer(int x,int y,int orig_x,int orig_y): x(x),y(y),x_origin(orig_x),y_origin(orig_y){}
     Commande* constructeurVirtuel(LireEntree* e);
     void execute();
     

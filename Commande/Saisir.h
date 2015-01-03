@@ -14,17 +14,18 @@
 #include "CommandeRobot.h"
 
 class Saisir : public CommandeRobot{
-private:
+protected:
     
-    Objet objet;
+    Objet* objet;
     
 public:
+    Saisir(Objet* o):objet(o){}
     
-    Commande constructeurVirtuel(LireEntree e);
+    Commande constructeurVirtuel(LireEntree* e);
     
     Commande execute();
     
     void undo();
-}
+};
 
 #endif

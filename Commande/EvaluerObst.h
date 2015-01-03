@@ -15,13 +15,15 @@
 class EvaluerObst : public CommandeRobot{
     
 public:
+    EvaluerObst():CommandeRobot(){}
     
-    Commande constructeurVirtuel(LireEntree e);
+    Commande constructeurVirtuel(LireEntree* e);
     
-    Commande execute();
+    void execute();
     
-    void undo();
-}
+    void undo(){}
+    
+};
 
 
 #endif

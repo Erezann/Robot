@@ -18,3 +18,8 @@ void Avancer::undo(){
   Commande::commandeUtilisees.pop();
   CommandeRobot::robot->avancer(x_origin,y_origin);
 }
+
+void Avancer::undo(){
+    x = x_origin;
+    y = y_origin;
+}

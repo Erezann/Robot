@@ -13,20 +13,23 @@
 #include "CommandeRobot.h"
 #include <string>
 
-class Repartir : public CommandeRobot{
-private:
+class Tourner : public CommandeRobot{
+protected:
     
-    String direction;
-    String direction_origin;
+    String _direction;
+    String _direction_origin;
     
 public:
+    Tourner(){}
     
-    Commande constructeurVirtuel(LireEntree e);
+    Tourner(string origin_direction, string direction) : _direction_origin(origin_direction), _direction(direction) {}
     
-    Commande execute();
+    Commande constructeurVirtuel(LireEntree* e);
+    
+    void execute();
     
     void undo();
-}
+};
 
 
 
