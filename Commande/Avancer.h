@@ -12,7 +12,8 @@
 #include "Commande.h"
 #include "CommandeRobot.h"
 
-class Avancer : public CommandeRobot{
+class Avancer : public CommandeRobot
+{
     
 private:
     
@@ -20,12 +21,12 @@ private:
     int x_origin, y_origin;
     
 public:
-    
-    Commande constructeurVirtuel(LireEntree e);
-    
-    Commande execute();
+    Avancer(){}
+ Avancer(int x,int y,int orig_x,int orig_y): x(x),y(y),x_origin(orig_x),y_origin(orig_y){}
+    Commande* constructeurVirtuel(LireEntree* e);
+    void execute();
     
     void undo();
-}
+};
 
 #endif
