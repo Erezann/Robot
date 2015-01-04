@@ -8,5 +8,5 @@ int main(){
   
   cout<<"Hello world"<<endl;
   LireEntree ent = LireEntree();
-    ent.lire();
+  ent.lire();
 }

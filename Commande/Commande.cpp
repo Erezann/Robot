@@ -3,7 +3,8 @@
  
 #include "Avancer.h"
 #include "Undo.h"
-
+#include "DefMacro.h"
+#include <iostream>
 
 stack<Commande*> Commande::commandeUtilisees = stack<Commande*>();
 
@@ -11,8 +12,9 @@ stack<Commande*> Commande::commandeUtilisees = stack<Commande*>();
 map<string,Commande*> create_map(){
   map<string,Commande*> m;
 
-  m["Avancer"] = new Avancer();
-  m["Undo"] = new Undo();
+  m["AVANCER"] = new Avancer();
+  m["UNDO"] = new Undo();
+  m["DEFMACRO"] = new DefMacro();
   return m;
 }
 

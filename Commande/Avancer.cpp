@@ -1,4 +1,5 @@
 #include "Avancer.h"
+#include <iostream>
 
 Commande* Avancer::constructeurVirtuel(LireEntree* e){
   int orig_x = CommandeRobot::robot->getX();
@@ -13,13 +14,8 @@ void Avancer::execute(){
   CommandeRobot::robot->avancer(x,y);
 }
 
-void Avancer::undo(){
-  
+void Avancer::undo(){ 
   Commande::commandeUtilisees.pop();
   CommandeRobot::robot->avancer(x_origin,y_origin);
 }
 
-void Avancer::undo(){
-    x = x_origin;
-    y = y_origin;
-}

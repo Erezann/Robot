@@ -10,6 +10,9 @@ void LireEntree::lire(){
     Commande* m;
     while(s!="exit" || s!="stop" || s!="quit" || s!="q"){
       cin>>s;
+      if(s=="exit" || s=="stop" || s=="quit" || s=="q"|| s=="STOP"){
+	break;
+      }
       m=Commande::nouvelleCommande(s,this);
       m->execute();
     }
@@ -28,5 +31,10 @@ int LireEntree::getInt(){
 }
 
 Commande* LireEntree::getCommande(){
-  return Commande::nouvelleCommande(getString(),this);
+  string s;
+  cin>>s;
+  if(s=="FINMACRO"){
+    return NULL;
+  }
+  return Commande::nouvelleCommande(s,this);
 }
