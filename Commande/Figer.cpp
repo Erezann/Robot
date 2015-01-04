@@ -11,7 +11,7 @@
 
 using namespace std;
 
-Commande Figer::constrcteurVirtuel(LireEntree* e){
+Commande* Figer::constructeurVirtuel(LireEntree* e){
     return new Figer();
     
 }
@@ -22,5 +22,6 @@ void Figer::execute(){
 }
 
 void Figer::undo(){
+	Commande::commandeUtilisees.pop();
     robot->repartir();
 }

@@ -11,12 +11,15 @@
 
 using namespace std;
 
-Commande Poser::constructeurVirtuel(LireEntree* e){
+Commande* Poser::constructeurVirtuel(LireEntree* e){
     return new Poser();
 }
 
-Commande Poser::execute(){
+void Poser::execute(){
     Commande::commandeUtilisees.push(this);
     robot->poser();
 }
 
+void Poser::undo(){
+	Commande::commandeUtilisees.pop();
+}

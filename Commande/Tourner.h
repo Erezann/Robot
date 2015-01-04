@@ -16,15 +16,15 @@
 class Tourner : public CommandeRobot{
 protected:
     
-    String _direction;
-    String _direction_origin;
+    string _direction_origin;
+    string _direction;
     
 public:
-    Tourner(){}
+    Tourner():CommandeRobot(){}
     
     Tourner(string origin_direction, string direction) : _direction_origin(origin_direction), _direction(direction) {}
     
-    Commande constructeurVirtuel(LireEntree* e);
+    Commande* constructeurVirtuel(LireEntree* e);
     
     void execute();
     

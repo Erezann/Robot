@@ -9,19 +9,19 @@
 #ifndef _RencontrerObst_h
 #define _RencontrerObst_h
 
-#include "Plot.h"
+#include "../Plot.h"
 #include "Commande.h"
 #include "CommandeRobot.h"
 
 class RencontrerObst : public CommandeRobot{
 protected:
     
-    Plot* plot;
+    int plot;
     
 public:
-    RencontrerObst(Plot* p):plot(p){}
+    RencontrerObst(int p):plot(p){}
     
-    Commande constructeurVirtuel(LireEntree* e);
+    Commande* constructeurVirtuel(LireEntree* e);
     
     void execute();
     

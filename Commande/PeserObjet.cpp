@@ -9,11 +9,15 @@
 #include <stdio.h>
 #include "PeserObjet.h"
 
-Commande PeserObjet::constructeurVirtuel(LireEntree* e){
+Commande* PeserObjet::constructeurVirtuel(LireEntree* e){
     return new PeserObjet();
 }
 
-Commande PeserObjet::execute(){
+void PeserObjet::execute(){
     Commande::commandeUtilisees.push(this);
     robot->peser();
+}
+
+void PeserObjet::undo(){
+	Commande::commandeUtilisees.pop();
 }

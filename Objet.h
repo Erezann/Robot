@@ -1,5 +1,5 @@
-#ifndef _OBJET_
-#define OBJET
+#ifndef _OBJET_H_
+#define _OBJET_H_
 
 class Objet
 {

@@ -9,16 +9,17 @@
 #include <stdio.h>
 #include "RencontrerObst.h"
 
-Commande RencontrerObst::constructeurVirtuel(LireEntree* e){
-    plot = new Plot(e.getInt());
+Commande* RencontrerObst::constructeurVirtuel(LireEntree* e){
+    plot = e->getInt();
     return new RencontrerObst(plot);
 }
 
 void RencontrerObst::execute(){
     Commande::commandeUtilisees.push(this);
-    robot->rencontrerPlot(plot));
+    robot->rencontrerPlot(plot);
 }
 
 void RencontrerObst::undo(){
-    plot = NULL;
+	Commande::commandeUtilisees.pop();
+    plot = 0;
 }

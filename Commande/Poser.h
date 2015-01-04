@@ -17,15 +17,11 @@ class Poser : public CommandeRobot{
 public:
     Poser():CommandeRobot(){ }
     
-    Commande constructeurVirtuel(LireEntree* e);
+    Commande* constructeurVirtuel(LireEntree* e);
     
     void execute();
     
-    void undo(){}
-    
-/*protected:
-    
-    Objet* objet;*/
+    void undo();
     
 };
 

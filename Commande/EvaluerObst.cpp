@@ -8,12 +8,15 @@
 
 #include "EvaluerObst.h"
 
-Commande EvaluerObsta::constructeurVirtuel(LireEntree* e){
+Commande* EvaluerObst::constructeurVirtuel(LireEntree* e){
     return new EvaluerObst();
 }
 
-void EvaluerObsta::execute(){
+void EvaluerObst::execute(){
     Commande::commandeUtilisees.push(this);
     robot->evaluerPlot();
 }
 
+void EvaluerObst::undo(){
+	  Commande::commandeUtilisees.pop();
+}

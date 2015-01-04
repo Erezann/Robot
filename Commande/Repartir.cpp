@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include "Repartir.h"
 
-Commande Repartir::constructeurVirtuel(LireEntree* e){
+Commande* Repartir::constructeurVirtuel(LireEntree* e){
     return new Repartir();
 }
 
@@ -18,3 +18,6 @@ void Repartir::execute(){
     robot->repartir();
 }
 
+void Repartir::undo(){
+	Commande::commandeUtilisees.pop();
+}

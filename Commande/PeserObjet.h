@@ -17,11 +17,11 @@ class PeserObjet : public CommandeRobot{
 public:
     PeserObjet():CommandeRobot(){}
     
-    Commande constructeurVirtuel(LireEntree* e);
+    Commande* constructeurVirtuel(LireEntree* e);
     
-    Commande execute();
+    void execute();
     
-    void undo(){}
+    void undo();
 };
 
 

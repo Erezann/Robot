@@ -9,16 +9,17 @@
 #include <stdio.h>
 #include "Saisir.h"
 
-Commande Saisir::constructeurVirtuel(LireEntree* e){
-    Objet* obj = new Objet(e->getInt());
-    return new Saisir(obj);
+Commande* Saisir::constructeurVirtuel(LireEntree* e){
+    objet = e->getInt();
+    return new Saisir(objet);
 }
 
-Commande Saisir::execute(){
+void Saisir::execute(){
     Commande::commandeUtilisees.push(this);
     robot->saisir(objet);
 }
 
 void Saisir::undo(){
-    objet = NULL;
+	Commande::commandeUtilisees.pop();
+    objet = 0;
 }
