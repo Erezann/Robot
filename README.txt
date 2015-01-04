@@ -24,3 +24,7 @@ make commande
 Pour tester:
 ./tst_commande
 
+ou
+
+./tst_commande<test
+
