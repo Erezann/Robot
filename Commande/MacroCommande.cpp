@@ -1,7 +1,12 @@
 #include "MacroCommande.h"
+#include "DefMacro.h"
+#include <string>
+
+#include <iostream>
 
 Commande* MacroCommande::constructeurVirtuel(LireEntree* e){
-  return new MacroCommande();
+  string s = e->getString();
+  return DefMacro::appeler(s);
 }
 
 void MacroCommande::execute(){
@@ -18,4 +23,5 @@ void MacroCommande::undo(){
 
 void MacroCommande::ajouter(Commande* c){
   list_commandes.push_back(c);
+  cout<<"taille"<<list_commandes.size()<<endl;
 }

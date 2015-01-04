@@ -8,6 +8,9 @@ Commande* DefMacro::constructeurVirtuel(LireEntree* e){
   Commande* commande;
   do{
     commande=e->getCommande();
+    if(commande==NULL){
+      break;
+    }
     macro->ajouter(commande);
   }while(commande!=NULL);
   return new DefMacro(macro,nom);
@@ -25,6 +28,6 @@ void DefMacro::undo(){
   cout<<"Macro commande enlevée : "<<nom_macro<<"\n"<<endl;
 }
 
-void DefMacro::appeler(string nom){
-  macro_commandes[nom]->execute();
+Commande* DefMacro::appeler(string nom){
+  return macro_commandes[nom];
 }

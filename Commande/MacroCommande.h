@@ -13,6 +13,7 @@ class MacroCommande : public Commande
   list<Commande*> list_commandes;
 
  public:
+ MacroCommande(): list_commandes() {}
   Commande* constructeurVirtuel(LireEntree* e);
   void execute();
   void undo();

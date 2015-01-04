@@ -23,7 +23,7 @@ class DefMacro : public Commande
   Commande* constructeurVirtuel(LireEntree* e);
   void execute();
   void undo();
-  void appeler(string nom);
+  static Commande* appeler(string nom);
 };
 
 #endif
