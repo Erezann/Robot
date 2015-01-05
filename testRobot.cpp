@@ -9,13 +9,9 @@ int main(){
   ElementARepresenter* e1 = new ElementARepresenter() ; 
   Robot *r = new Robot(3,3,"S",e1);
   Afficheur* a1 = new AfficheurTexte(r);
-  cout<<"test a1"<<endl;
   a1->afficher();
-  cout<<"test success"<<endl;
   e1->attacherAfficheur(a1);
-  cout<<"###notifier plante"<<endl;
   e1->notifier();
-  cout<<"meme pas !!!"<<endl;
 
   cout<<"Le robot se tourne vers l'Est."<<endl;
   r->tourner("E");
@@ -53,7 +49,6 @@ int main(){
   r->tourner("N");
   
 
-  cout<<"\n\t###2eme partie \n"<<endl;
   ElementARepresenter* e2 = new ElementARepresenter();
   Robot* r2 = new  Robot(1,1,"N",e2);
   Afficheur* a2 = new AfficheurTexte(r2);
