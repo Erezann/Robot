@@ -16,10 +16,11 @@
 class Saisir : public CommandeRobot{
 protected:
     
-    int objet;
+    int poidsObjet;
     
 public:
-    Saisir(int o):objet(o){}
+    Saisir(){}
+    Saisir(int poids):poidsObjet(poids){}
     
     Commande* constructeurVirtuel(LireEntree* e);
     

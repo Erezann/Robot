@@ -10,9 +10,9 @@
 #include "Tourner.h"
 
 Commande* Tourner::constructeurVirtuel(LireEntree* e){
-    string origin_direction = e->getString();
-    string direction = e->getString();
-    return new Tourner(origin_direction, direction);
+  string origin_direction = CommandeRobot::robot->getDirection();
+  string direction = e->getString();
+  return new Tourner(origin_direction, direction);
 }
 
 void Tourner::execute(){
@@ -21,6 +21,6 @@ void Tourner::execute(){
 }
 
 void Tourner::undo(){
-	Commande::commandeUtilisees.pop();
-    _direction = _direction_origin;
+  Commande::commandeUtilisees.pop();
+  robot->tourner(_direction_origin);
 }

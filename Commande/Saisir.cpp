@@ -10,16 +10,16 @@
 #include "Saisir.h"
 
 Commande* Saisir::constructeurVirtuel(LireEntree* e){
-    objet = e->getInt();
-    return new Saisir(objet);
+    poidsObjet = e->getInt();
+    return new Saisir(poidsObjet);
 }
 
 void Saisir::execute(){
     Commande::commandeUtilisees.push(this);
-    robot->saisir(objet);
+    robot->saisir(poidsObjet);
 }
 
 void Saisir::undo(){
-	Commande::commandeUtilisees.pop();
-    objet = 0;
+  Commande::commandeUtilisees.pop();
+  robot->poser();
 }

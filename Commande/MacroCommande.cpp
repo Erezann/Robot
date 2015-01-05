@@ -23,5 +23,4 @@ void MacroCommande::undo(){
 
 void MacroCommande::ajouter(Commande* c){
   list_commandes.push_back(c);
-  cout<<"taille"<<list_commandes.size()<<endl;
 }

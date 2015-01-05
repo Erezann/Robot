@@ -15,7 +15,7 @@ Commande* EvaluerObst::constructeurVirtuel(LireEntree* e){
 
 void EvaluerObst::execute(){
     Commande::commandeUtilisees.push(this);
-    std::cout<<"Le plot a une taille de "<<robot->evaluerPlot()<<std::endl;
+    robot->evaluerPlot();
 }
 
 void EvaluerObst::undo(){
