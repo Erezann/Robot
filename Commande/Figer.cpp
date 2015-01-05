@@ -22,6 +22,6 @@ void Figer::execute(){
 }
 
 void Figer::undo(){
-	Commande::commandeUtilisees.pop();
-    robot->repartir();
+  Commande::commandeUtilisees.pop();
+  robot->repartir();
 }

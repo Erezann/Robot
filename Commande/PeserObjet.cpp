@@ -19,5 +19,5 @@ void PeserObjet::execute(){
 }
 
 void PeserObjet::undo(){
-	Commande::commandeUtilisees.pop();
+  Commande::commandeUtilisees.pop();
 }

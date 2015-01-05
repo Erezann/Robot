@@ -63,8 +63,12 @@ class Robot
    //retourne la coordonnée x de position
    int getX();
 
-   //retour la coordonnée y de position
+   //retourne la coordonnée y de position
    int getY();
+
+   //retourne la direction du robot
+   string getDirection();
+
 };
 
 #endif
