@@ -38,5 +38,7 @@ return m;
 map<string, Commande*> Commande::commandes = create_map();
 
 Commande* Commande::nouvelleCommande(string s, LireEntree* e){
-  return (commandes[s])->constructeurVirtuel(e);
+  Commande* c = commandes[s];
+  if(c==NULL) return NULL;
+  return c->constructeurVirtuel(e);
 }
