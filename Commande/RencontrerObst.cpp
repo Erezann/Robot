@@ -8,18 +8,18 @@
 
 #include <stdio.h>
 #include "RencontrerObst.h"
+#include "../Plot.h"
 
-Commande* RencontrerObst::constructeurVirtuel(LireEntree* e){
-    plot = e->getInt();
-    return new RencontrerObst(plot);
+Commande* RencontrerObst::constructeurVirtuel(LireEntree* e){  
+  return new RencontrerObst(e->getInt());
 }
 
 void RencontrerObst::execute(){
     Commande::commandeUtilisees.push(this);
-    robot->rencontrerPlot(plot);
+    robot->rencontrerPlot(Plot(taillePlot));
 }
 
 void RencontrerObst::undo(){
-	Commande::commandeUtilisees.pop();
-    plot = 0;
+  Commande::commandeUtilisees.pop();
+  robot->tourner(robot->getDirection());
 }

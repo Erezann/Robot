@@ -14,12 +14,12 @@
 #include "CommandeRobot.h"
 
 class RencontrerObst : public CommandeRobot{
-protected:
-    
-    int plot;
+ private:
+  int taillePlot;
     
 public:
-    RencontrerObst(int p):plot(p){}
+  RencontrerObst(){}
+ RencontrerObst(int taille):taillePlot(taille){}
     
     Commande* constructeurVirtuel(LireEntree* e);
     
