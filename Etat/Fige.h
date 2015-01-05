@@ -17,8 +17,8 @@ using namespace std;
 class Fige: public Etat{
  private:
   static Fige* instance;              // schema singleton
-  Etat* etat_avant;                   // mémoriser le dernier état
-  Fige(Etat* e);//: etat_avant(e){}      // constructeur avec l'état
+  static Etat* etat_avant;                // mémoriser le dernier état
+  //  Fige();//: etat_avant(e){}      // constructeur avec l'état
  public:
   static Fige* getInstance(Etat* e);  // entrer dans l'état figé
   Etat* repartir();           // changer au dernier état

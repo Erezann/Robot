@@ -8,21 +8,22 @@
 
 #include "Fige.h"
 
-Fige::Fige(Etat* e): etat_avant(e){}
+//Fige::Fige(Etat* e): etat_avant(e){}
 
 Fige* Fige::instance = NULL;
+Etat* Fige::etat_avant = NULL;
 
 Fige* Fige::getInstance(Etat* etat){
   if(instance == NULL){
-        instance = new Fige(etat);
-    }else{
-        instance->etat_avant = etat;
-	}
-    return instance;
+        instance = new Fige();
+    }
+  etat_avant = etat;
+    
+  return instance;
 }
 
 Etat* Fige::repartir(){
-    return this->etat_avant;
+  return etat_avant;
 }
 
 string Fige::toString(){
