@@ -7,6 +7,7 @@
 //
 
 #include "EvaluerObst.h"
+#include "iostream"
 
 Commande* EvaluerObst::constructeurVirtuel(LireEntree* e){
     return new EvaluerObst();
@@ -14,9 +15,9 @@ Commande* EvaluerObst::constructeurVirtuel(LireEntree* e){
 
 void EvaluerObst::execute(){
     Commande::commandeUtilisees.push(this);
-    robot->evaluerPlot();
+    std::cout<<"Le plot a une taille de "<<robot->evaluerPlot()<<std::endl;
 }
 
 void EvaluerObst::undo(){
-	  Commande::commandeUtilisees.pop();
+  Commande::commandeUtilisees.pop();
 }
